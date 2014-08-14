@@ -1,0 +1,41 @@
+#wrap{
+
+	width:100%;
+}
+#wrap header{
+	width:100%;
+	
+	display: -webkit-box;
+	display: box;
+	margin-top:15px;
+	padding-bottom:5px; 
+}
+#wrap header h1{
+	-webkit-box-flex:20;
+	font-size: 32px;
+	color:#444444;
+	margin-left:15px;
+	display: -webkit-box;
+	display: box;
+	line-height: 46px;
+
+}
+#wrap header ul{
+	-webkit-box-flex:70;
+	display: -webkit-box;
+	display: box;
+	position: relative;
+	background: url(../img/pic3.jpg) no-repeat;
+	background-size: 100% 100%;
+	margin-right:15px;
+
+}
+#wrap header ul li{
+	line-height: 46px;
+	text-align: center;
+	font-size: 14px;
+	color:#444444; 
+	-webkit-box-flex:1;
+	cursor: pointer;
+}
+

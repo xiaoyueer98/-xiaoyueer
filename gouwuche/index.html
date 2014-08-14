@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<title>订单查询</title>
+	<link rel="stylesheet" type="text/javascript" href="css/reset.css" />
+	<link rel="stylesheet" type="text/javascript" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<h1>购物车</h1>
+			<ul class="list">
+				<li style="color:#FFFFFF;">我的购物车</li>
+				<li>确认订单信息</li>
+				<li>提交订单成功</li>
+			</ul>
+		</header>
+	</div>
+
+
+	<script type="text/javascript">
+		$(".list li:nth-child(1)").on("click" , function(){
+			$(this).css("color","#FFFFFF").siblings().css("color","#444444");
+			$(".list").css({
+				"background":"url(img/pic3.jpg) no-repeat",
+				"background-size":"100% 100%"
+			});
+
+		})
+
+		$(".list li:nth-child(2)").on("click" , function(){	
+			$(this).css("color","#FFFFFF").siblings().css("color","#444444")
+			$(".list").css({
+				"background":"url(img/pic4.jpg) no-repeat",
+				"background-size":"100% 100%"
+			});
+		})
+
+		$(".list li:nth-child(3)").on("click" , function(){	
+			$(this).css("color","#FFFFFF").siblings().css("color","#444444")
+			$(".list").css({
+				"background":"url(img/pic6.png) no-repeat",
+				"background-size":"100% 100%"
+			});
+		})
+	</script>
+</body>
+</html>

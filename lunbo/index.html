@@ -1,0 +1,39 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+
+var knext = 1; 
+var t = 0;
+function  fun1(){
+   
+    clearInterval(t);
+    
+    $(".img_lun").each(function(k){
+        
+        //alert($(this).css("display"));
+        if($(this).css("display") == "block"){
+           
+            knext = k + 1;
+            var n = $(".img_lun").length;
+            if(knext == n){
+                knext = 0;
+            }
+        }
+        //alert(knext);  
+    })
+    $(".img_lun").css("display","none");
+    $(".img_lun"+knext).css("display","block");
+    //alert(knext);    
+    t=setInterval('fun1()',6000);
+
+}
+</script>
+
+<body onload="fun1();t=setInterval('fun1()',6000);">
+
+<div class="banner">
+      <a href=""><img src="images/banner.jpg"  class="img_lun  img_lun0" style="display:none;"/></a>    
+      <a href=""><img src="images/banner-shujia.jpg"   class="img_lun img_lun1"/></a>     
+</div>
+
+</body>

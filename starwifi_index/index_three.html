@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta content="yes" name="apple-mobile-web-app-capable" />   
+        <meta content="telephone=no" name="format-detection" />
+        <script type="text/javascript" src="js/jquery18.js"></script>
+        <title>幻灯片</title>
+        <link rel="icon" href="images/logo.png" type="image/x-icon" />
+        
+        <script type="text/javascript">
+            function setPic(obj) {
+                if (obj == 'bc1') {
+                    document.getElementById("bc2").className = 'mask';
+                    document.getElementById("bc3").className = 'mask';
+                } else if (obj == 'bc2') {
+                    document.getElementById("bc1").className = 'mask';
+                    document.getElementById("bc3").className = 'mask';
+                } else {
+                    document.getElementById("bc1").className = 'mask';
+                    document.getElementById("bc2").className = 'mask';
+                }
+            }
+
+            function clearPic() {
+                document.getElementById("bc1").className = '';
+                document.getElementById("bc2").className = '';
+                document.getElementById("bc3").className = '';
+            } 
+        </script>
+        <style>
+          .clear:after{content:""; clear:both; overflow:hidden; zoom:1;display:block;}
+          .mask{background:#000;opacity:0.5;filter:alpha(opacity=50);cursor:pointer}
+          .indexrecom{width: 100%;height:176px;margin-top: 14px; margin-bottom: 28px; text-align: center;}
+          #bc1{text-align:left;margin-right:5px;}
+          #bc2{}
+          #bc3{text-align: right; margin-left: 5px}
+        </style>
+    </head>
+
+    
+    <body>
+        <div class="indexrecom clear">
+            <img id="bc1" src="images/banner1.jpg"  onmousemove="setPic(this.id)" onmouseout="clearPic()">
+            <img id="bc2" src="images/banner2.jpg" onmousemove="setPic(this.id)" onmouseout="clearPic()">
+            <img id="bc3" src="images/banner3.jpg" onmousemove="setPic(this.id)" onmouseout="clearPic()">
+        </div> 
+    </body>
+
+</html>

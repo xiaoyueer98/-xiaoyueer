@@ -1,0 +1,47 @@
+#wrap{
+
+	width:100%;
+}
+#wrap header{
+	width:100%;
+	
+	display: -webkit-box;
+	display: box;
+	margin-top:15px;
+	border-bottom:1px solid #cdcdcd;  
+	padding-bottom:5px; 
+}
+#wrap header h1{
+	-webkit-box-flex:10;
+	font-size: 30px;
+	color:#444444;
+	-webkit-box-pack:center;
+	text-align: center;
+	display: -webkit-box;
+	display: box;
+	line-height: 38px;
+
+}
+#wrap header ul{
+	-webkit-box-flex:90;
+	display: -webkit-box;
+	display: box;
+	position: relative;
+
+}
+#wrap header ul li{
+
+	text-align: center;
+	font-size: 12px;
+	color:#444444; 
+	-webkit-box-flex:1;
+	cursor: pointer;
+	position:relative;
+	left:0;
+	bottom:-15px;
+}
+#wrap header ul li.dianji{
+	background: url(../img/pic2.png) no-repeat;
+	color:#00b4fa;
+	background-position: center 28px; 
+}

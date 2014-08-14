@@ -1,0 +1,65 @@
+<!--http://sentsin.com/jquery/layer/api.html#ext     api网址-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<title>弹出层</title>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+       <script type="text/javascript" src="js/layer/layer.min.js"></script>
+	<script type="text/javascript">
+	     
+           function showDiv1() {
+		$.layer({
+		    type: 1,
+		    title: false,
+		    area: ['500px', '280'],
+         	    btns: 2,
+		    btn: ['确定', '取消'],
+		    zIndex: 1,
+		    page: {
+		        dom: '#showDiv'
+		    }, success: function() {
+		        layer.shift('top'); //左边动画弹出
+		    }
+		});
+            }
+          
+       </script>
+      
+       <style>
+
+       </style>
+</head>
+<body>
+<div><center onclick="showDiv1()">showDiv</center></div>
+
+<div id="showDiv" style="display: none;width:500px" >
+    <table width="100%" align="center">
+        <tr>
+            <td  height="53">&nbsp;</td>
+        </tr>
+    </table>
+    <table width="100%" align="center">
+        <tr>
+            <td  align="center" height="68" valign="middle" >
+		  <img  src="__ROOT__/index/Tpl/images/pcimages/icon_advice.gif" style="vertical-align:middle"/>
+		  <font style="vertical-align:middle; font-size:16px"> 商品已成功加入购物车 ! </font>
+	     </td>       
+        </tr>
+                
+    </table>
+    <table width="100%" align="center">
+        <tr>
+            <td  align="center">
+		  <input name="button" type="button" style="background-color:#e65a1d; width:120px; height:30px; font-size:14px; font-weight:bold; color:#FFFFFF" onClick="javascript:location.href = 'index.php?m=Cart&a=addCart'" value="去购物车并结算" />            &nbsp;&nbsp;&nbsp;
+	     </td>
+        </tr>
+    </table>
+</div>
+
+</body>	
+</html>

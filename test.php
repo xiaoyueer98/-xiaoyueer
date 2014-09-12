@@ -20,6 +20,15 @@
 
 </body>
 	<script type="text/javascript">
+var name = "小飞象";
+var resume = "才毕业的菜鸟级别的人，总是犯一些未知活已知的错误，需要给出自己的判断力，加强自己的执行力，你需要不断的去把控自己，给出所有的问题一个正确的解决方式";
+StringBuilder sb = new StringBuilder();
+sb.AppendFormat("{ \"name\":\"{0}\",\"resume\":\"{1}\"}", name, resume);
+Console.WriteLine(sb.ToString());
+Console.ReadKey();
+
+/*
+
         //layer.confirm("试一试?", function(){alert("确定了");}, function(){alert("取消了");});
         layer.msg('删除成功', 2, function(){
             
@@ -27,7 +36,7 @@
                // layer.msg('删除成功', 2, type:1,shade:true,rate:1);    //对象方法没测试成功
         });
         layer.load("loading", 3);
-    
+  */  
     </script>
 </html>
 
